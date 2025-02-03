@@ -15,5 +15,7 @@ PyTorch
 Pycox for survival analysis models
 numpy, pandas, scikit-learn for data processing
 matplotlib, seaborn for plotting
+## Data for Main Script
+The dataset used in the `main.py` file can be downloaded from [this link](https://wustl.box.com/s/gjirx49ken4n8o8lk2bdgrmn8wjec9p5).
 ## Acknowledgements
 This project uses the Pycox library for survival analysis models and torchtuples for additional PyTorch utility functions.
