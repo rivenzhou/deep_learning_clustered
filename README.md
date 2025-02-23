@@ -17,6 +17,7 @@ This code trains a Cox Proportional Hazards model with frailty terms on survival
 - numpy, pandas, scikit-learn (for data processing)
 - matplotlib, seaborn (for plotting)
 ## Instruction for implementation
+1. Download the var2_5_sample.zip and upzip the sample datasets.
 1. Open the folder deep_learning_cluster and change the user path in the `main.ipynb` file to point to the `var2_5_sample` directory where the sample data is stored.
 2. Run the `main.ipynb` notebook.
 ## Acknowledgements
