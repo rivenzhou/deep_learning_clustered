@@ -7,7 +7,7 @@ from torchtuples import TupleTree
 
 
 
-def cox_ph_loss_sorted(log_h: Tensor, weights: Tensor,events: Tensor, eps: float = 1e-7,d_theta: float =0.003) -> Tensor:
+def cox_ph_loss_sorted(log_h: Tensor, weights: Tensor,events: Tensor, eps: float = 1e-7,d_theta: float =2) -> Tensor:
     """Requires the input to be sorted by descending duration time.
     See DatasetDurationSorted.
     We calculate the negative log of $(\frac{h_i}{\sum_{j \in R_i} h_j})^d$,
@@ -27,7 +27,7 @@ def cox_ph_loss_sorted(log_h: Tensor, weights: Tensor,events: Tensor, eps: float
     #return - log_h.sub(log_cumsum_h).mul(events).sum().div(events.sum())+ weights.T.dot(weights).mul(0.5*d_theta)
     return - log_h.sub(log_cumsum_h).mul(events).sum().div(events.sum()) + weights.dot(weights).mul(0.5/d_theta)
 
-def cox_ph_loss(log_h: Tensor, weights: Tensor,durations: Tensor, events: Tensor, eps: float = 1e-7,d_theta: float =0.003) -> Tensor:
+def cox_ph_loss(log_h: Tensor, weights: Tensor,durations: Tensor, events: Tensor, eps: float = 1e-7,d_theta: float =2) -> Tensor:
     """Loss for CoxPH model. If data is sorted by descending duration, see `cox_ph_loss_sorted`.
     We calculate the negative log of $(\frac{h_i}{\sum_{j \in R_i} h_j})^d$,
     where h = exp(log_h) are the hazards and R is the risk set, and d is event.
