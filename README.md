@@ -21,4 +21,4 @@ This code trains a Cox Proportional Hazards model with frailty terms on survival
 1. Open the folder deep_learning_cluster and change the user path in the `main.ipynb` file to point to the `var2_5_sample` directory where the sample data is stored.
 2. Run the `main.ipynb` notebook.
 ## Acknowledgements
-This project uses the Pycox library for survival analysis models and torchtuples for additional PyTorch utility functions.
+This project uses the Pycox library for survival analysis models and torchtuples for additional PyTorch utility functions. Restrictions apply to the availability of the real data, which were used under license for this study.
